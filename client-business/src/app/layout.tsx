@@ -1,10 +1,9 @@
 
 import type { Metadata } from "next";
 import { Arimo } from "next/font/google";
-import { SlSocialInstagram, SlSocialFacebook, SlSocialTwitter, SlSocialLinkedin } from "react-icons/sl";
-import Link from 'next/link';
-import "./globals.css";
 import { Social } from "@/components/Social/Social";
+import { Header } from "@/components/Header/Header";
+import "./globals.css";
 
 const arimoSans = Arimo({
   variable: "--font-arimo",
@@ -27,7 +26,8 @@ export default function RootLayout({
         className={`${arimoSans.variable} antialiased`}
       >
         <Social />
-        <hr className="border-red-500"></hr>
+        <hr className="border-red-50"></hr>
+        <Header />
         {children}
       </body>
     </html>
